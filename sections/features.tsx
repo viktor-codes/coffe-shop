@@ -41,7 +41,7 @@ const features = () => {
 					combining exceptional flavor with an unmatched cozy experience.
 				</p>
 			</div>
-			<div className='container mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mt-16 px-4'>
+			<div className='2xl:max-w-[1240px] container mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mt-16 mb-8 px-4'>
 				{featureData.map((feature, index) => (
 					// Card Container: flex column, centered content, padding, border-radius
 					<div

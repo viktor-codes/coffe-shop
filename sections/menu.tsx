@@ -46,11 +46,11 @@ const menu = () => {
 					pastries, and savory bites, all prepared with passion.
 				</p>
 			</div>
-			<div className='container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4'>
+			<div className='2xl:max-w-[1240px] container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
 				{menuItems.map((item, index) => (
 					<div
 						key={index}
-						className='relative w-full h-[500px] overflow-hidden shadow-lg group' // Added group for hover effects, fixed height
+						className='relative w-full h-[500px] overflow-hidden'
 					>
 						{/* Background Image */}
 						<Image

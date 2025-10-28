@@ -1,8 +1,8 @@
 import Hero from '@/sections/hero'
-import Image from 'next/image'
 import Navbar from '@/components/navbar'
 import Features from '@/sections/features'
 import Menu from '@/sections/menu'
+import About from '@/sections/about'
 
 export default function Home() {
 	return (
@@ -11,6 +11,7 @@ export default function Home() {
 			<Hero />
 			<Features />
 			<Menu />
+			<About />
 		</>
 	)
 }
