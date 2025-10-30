@@ -3,6 +3,7 @@ import Navbar from '@/components/navbar'
 import Features from '@/sections/features'
 import Menu from '@/sections/menu'
 import About from '@/sections/about'
+import Testimonials from '@/sections/testimonials'
 
 export default function Home() {
 	return (
@@ -12,6 +13,7 @@ export default function Home() {
 			<Features />
 			<Menu />
 			<About />
+			<Testimonials />
 		</>
 	)
 }

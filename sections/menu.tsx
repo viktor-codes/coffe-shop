@@ -46,7 +46,7 @@ const menu = () => {
 					pastries, and savory bites, all prepared with passion.
 				</p>
 			</div>
-			<div className='2xl:max-w-[1240px] container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+			<div className='2xl:max-w-7xl container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
 				{menuItems.map((item, index) => (
 					<div
 						key={index}

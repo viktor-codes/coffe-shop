@@ -3,7 +3,7 @@ import aboutImage from '@/assets/about.webp'
 
 const about = () => {
 	return (
-		<section className='container  2xl:max-w-[1240px] mx-auto py-20'>
+		<section className='container  2xl:max-w-7xl mx-auto py-20'>
 			{/* 1. Main Flex Container */}
 			<div className='flex flex-col lg:flex-row items-center gap-4'>
 				{/* 2. Image Container - Positioned and Mirrored */}

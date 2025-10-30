@@ -4,7 +4,7 @@ import heroImage from '@/assets/293.webp'
 
 const hero = () => {
 	return (
-		<section className='container 2xl:max-w-[1240px] mx-auto flex gap-16 pt-20'>
+		<section className='container 2xl:max-w-7xl mx-auto flex gap-16 pt-20'>
 			<div className='relative w-[600px] h-[750px] shadow-2xl ms-2  shadow-white z-10'>
 				<Image
 					src={heroImage}
