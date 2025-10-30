@@ -31,7 +31,7 @@ const features = () => {
 	]
 
 	return (
-		<section className='bg-dark mt-[-100px] pt-[180px] pb-20 text-light'>
+		<section className='bg-dark mt-[-100px] pt-[180px] py-20 text-light'>
 			<div className='text-center'>
 				<h2 className='capitalize text-5xl font-semibold leading-[120%] mb-4'>
 					Why We Are Special Cafe

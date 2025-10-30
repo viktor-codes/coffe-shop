@@ -56,14 +56,11 @@ const menu = () => {
 						<Image
 							src={item.image}
 							alt={item.title}
-							layout='fill'
-							objectFit='cover'
-							objectPosition='center'
-							className='transition-transform duration-500 group-hover:scale-105' // Subtle zoom on hover
+							className='h-full object-cover object-center transition-transform duration-500 group-hover:scale-105'
 						/>
 
 						{/* Content Overlay (bottom 1/3) */}
-						<div className='absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-dark to-dark/50 p-6 flex flex-col justify-end text-light transition-all duration-300 group-hover:h-2/5'>
+						<div className='absolute bottom-0 left-0 right-0 h-1/3 bg-linear-to-t from-dark to-dark/50 p-6 flex flex-col justify-end text-light transition-all duration-300 group-hover:h-2/5'>
 							{' '}
 							{/* Adjusted height and gradient */}
 							<h4 className='text-3xl font-bold mb-2 leading-tight'>

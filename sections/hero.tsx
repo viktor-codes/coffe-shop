@@ -9,10 +9,10 @@ const hero = () => {
 				<Image
 					src={heroImage}
 					alt='hero image - a nice cup of coffee'
-					className='shadow-xl'
-					layout='fill' // Tells the image to fill its parent
-					objectFit='cover' // OR object-cover in Tailwind: Tells it to cover the space, cropping if necessary
-					objectPosition='center'
+					className='shadow-xl h-full object-cover object-center'
+					// layout='fill' // Tells the image to fill its parent
+					// objectFit='cover' // OR object-cover in Tailwind: Tells it to cover the space, cropping if necessary
+					// objectPosition='center'
 				/>
 			</div>
 			<div className='flex flex-1 flex-col gap-10 xl:w-1/2'>
