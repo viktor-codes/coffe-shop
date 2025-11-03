@@ -1,5 +1,3 @@
-import Image from 'next/image'
-import Logo from '@/assets/coffee-logo.png'
 import Link from 'next/link'
 import { GiCoffeeMug } from 'react-icons/gi'
 import { IoMenu } from 'react-icons/io5'
