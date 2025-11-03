@@ -6,6 +6,7 @@ import Menu from '@/sections/menu'
 import About from '@/sections/about'
 import Testimonials from '@/sections/testimonials'
 import Reservation from '@/sections/reservation'
+import Articles from '@/sections/articles'
 
 export default function Home() {
 	return (
@@ -17,6 +18,7 @@ export default function Home() {
 			<About />
 			<Testimonials />
 			<Reservation />
+			<Articles />
 			<Footer />
 		</>
 	)
