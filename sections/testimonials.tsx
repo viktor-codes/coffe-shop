@@ -44,7 +44,7 @@ const TestimonialCard = ({
 		<div className='mt-6 pt-4 '>
 			<div className='flex mb-4 justify-center gap-2'>
 				{[...Array(rating)].map((_, i) => (
-					<IoMdStar key={i} size={24} className='text-yellow-600' />
+					<IoMdStar key={i} size={24} className='text-yellow-400' />
 				))}
 			</div>
 			<p className='text-dark font-bold text-lg'>{name}</p>

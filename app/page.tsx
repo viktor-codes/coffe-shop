@@ -5,6 +5,7 @@ import Features from '@/sections/features'
 import Menu from '@/sections/menu'
 import About from '@/sections/about'
 import Testimonials from '@/sections/testimonials'
+import Reservation from '@/sections/reservation'
 
 export default function Home() {
 	return (
@@ -15,6 +16,7 @@ export default function Home() {
 			<Menu />
 			<About />
 			<Testimonials />
+			<Reservation />
 			<Footer />
 		</>
 	)
