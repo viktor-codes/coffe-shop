@@ -1,4 +1,4 @@
-import Navbar from '@/components/navbar'
+import Navbar from '@/components/layout/navbar/navbar'
 import Image from 'next/image'
 import heroImage from '@/assets/293.webp'
 

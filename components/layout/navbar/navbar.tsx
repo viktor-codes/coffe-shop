@@ -4,9 +4,9 @@ import { IoMenu } from 'react-icons/io5'
 
 const menuItems = [
 	{ name: 'Home', href: '#link' },
-	{ name: 'About', href: '#link' },
 	{ name: 'Menu', href: '#link' },
-	{ name: 'Blog', href: '#link' },
+	{ name: 'About', href: '#link' },
+	{ name: 'Articles', href: '#link' },
 	{ name: 'Contacts', href: '#link' },
 ]
 
@@ -23,7 +23,7 @@ const navbar = () => {
 						<p className='text-2xl font-bold '>Kopikap</p>
 					</Link>
 					<div className='flex flex-row justify-center items-center'>
-						<div className='lg:hidden cursor-pointer'>
+						<div className='lg:hidden cursor-pointer text-dark'>
 							<IoMenu size={40} />
 						</div>
 						<ul className='hidden lg:flex gap-12'>

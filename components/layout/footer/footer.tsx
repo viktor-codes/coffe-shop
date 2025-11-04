@@ -95,23 +95,23 @@ const Footer = () => {
 					<div className='flex flex-col gap-5 max-w-3xl order-last md:order-first'>
 						<FooterColumn title={FOOTER_CONTACT_INFO.title} className=''>
 							{FOOTER_CONTACT_INFO.links.map(link => (
-								<Link
+								<div
 									href='/'
 									key={link.label}
 									className='flex gap-4 md:flex-col lg:flex-row'
 								>
 									<p className='whitespace-nowrap'>{link.label}:</p>
-									<p className='text-base text-light/70 whitespace-nowrap'>
+									<p className='text-base text-primary lg:max-w-[200px] max-w-full'>
 										{link.value}
 									</p>
-								</Link>
+								</div>
 							))}
 						</FooterColumn>
 
-						<div className='border-b border-light/30' />
+						<div className='hidden lg:block border-b border-light/30' />
 						<Link
 							href='/'
-							className='flex gap-1.5 justify-center items-center cursor-pointer text-light'
+							className='hidden lg:flex gap-1.5 justify-center items-center cursor-pointer text-light'
 						>
 							<GiCoffeeMug size={48} />
 							<p className='text-2xl font-bold '>Kopikap</p>
@@ -162,7 +162,7 @@ const Footer = () => {
 						</FooterColumn>
 					))}
 				</div>
-				<div className='border bg-gray-20' />
+				<div className='border-t border-light/30 ' />
 				<p className='regular-14 w-full text-center text-light/70'>
 					2025 Kopikap | All rights reserved
 				</p>

@@ -1,5 +1,5 @@
 import Hero from '@/sections/hero'
-import Navbar from '@/components/navbar'
+import Navbar from '@/components/layout/navbar/navbar'
 import Footer from '@/components/footer'
 import Features from '@/sections/features'
 import Menu from '@/sections/menu'
