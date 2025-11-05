@@ -8,12 +8,19 @@ import Testimonials from '@/components/sections/testimonials/testimonials'
 import Reservation from '@/components/sections/reservation/reservation'
 import Articles from '@/components/sections/articles/articles'
 
+import { features } from '@/config/features'
+
 export default function Home() {
 	return (
 		<>
 			<Navbar />
 			<Hero />
-			<Features />
+			{/* Features Section */}
+			<Features
+				features={features}
+				title='Why We Are Special Cafe'
+				description="We believe great coffee is only part of the story. It's about combining exceptional flavor with an unmatched cozy experience."
+			/>
 			<Menu />
 			<About />
 			<Testimonials />
