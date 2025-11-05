@@ -9,6 +9,7 @@ import Reservation from '@/components/sections/reservation/reservation'
 import Articles from '@/components/sections/articles/articles'
 
 import { features } from '@/config/features'
+import { menuItems } from '@/config/menu'
 
 export default function Home() {
 	return (
@@ -16,12 +17,8 @@ export default function Home() {
 			<Navbar />
 			<Hero />
 			{/* Features Section */}
-			<Features
-				features={features}
-				title='Why We Are Special Cafe'
-				description="We believe great coffee is only part of the story. It's about combining exceptional flavor with an unmatched cozy experience."
-			/>
-			<Menu />
+			<Features features={features} />
+			<Menu items={menuItems} />
 			<About />
 			<Testimonials />
 			<Reservation />
