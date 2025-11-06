@@ -1,8 +1,4 @@
-export interface NavItem {
-	name: string
-	href: string
-	external?: boolean
-}
+import { NavItem } from '@/components/layout/navbar'
 
 export const mainNavigation: NavItem[] = [
 	{ name: 'Home', href: '/' },
