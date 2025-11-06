@@ -1,4 +1,4 @@
-import Section from '@/components/ui/section/section'
+import Section from '@/components/ui/section'
 import SectionHeader from '@/components/ui/section-header'
 import FeatureCard from './feature-card'
 import { FeaturesProps } from './features.types'

@@ -8,6 +8,8 @@ import Testimonials from '@/components/sections/testimonials/testimonials'
 import Reservation from '@/components/sections/reservation/reservation'
 import Articles from '@/components/sections/articles/articles'
 
+import aboutImage from '@/assets/about.webp'
+
 import { features } from '@/config/features'
 import { menuItems } from '@/config/menu'
 
@@ -19,7 +21,13 @@ export default function Home() {
 			{/* Features Section */}
 			<Features features={features} />
 			<Menu items={menuItems} />
-			<About />
+			<About
+				title='Our Story'
+				description='...'
+				image={aboutImage}
+				imageAlt='Coffee machine'
+				founded={2010}
+			/>
 			<Testimonials />
 			<Reservation />
 			<Articles />

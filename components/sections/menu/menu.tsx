@@ -1,4 +1,4 @@
-import Section from '@/components/ui/section/section'
+import Section from '@/components/ui/section/'
 import SectionHeader from '@/components/ui/section-header'
 import MenuItemCard from './menu-item'
 import { MenuProps } from './menu.types'

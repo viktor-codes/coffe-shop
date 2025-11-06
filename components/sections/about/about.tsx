@@ -1,46 +1,104 @@
 import Image from 'next/image'
-import aboutImage from '@/assets/about.webp'
+import Section from '@/components/ui/section'
+import Button from '@/components/ui/button'
+import { AboutProps } from './about.types'
+import { cn } from '@/lib/utils'
+import { ctaConfig } from '@/config/navigation'
 
-const about = () => {
+/**
+ * About section with overlapping image and content design
+ *
+ * @example
+ * <About
+ *   title="Our Story"
+ *   description="..."
+ *   image={aboutImage}
+ *   imageAlt="Coffee machine"
+ *   founded={2010}
+ * />
+ */
+const About = ({
+	title,
+	description,
+	image,
+	imageAlt,
+	ctaText = ctaConfig.learnMore.text,
+	ctaHref = ctaConfig.learnMore.href,
+	founded,
+	imageOnLeft = true,
+	className = '',
+}: AboutProps) => {
 	return (
-		<section className='container  2xl:max-w-7xl mx-auto py-20'>
-			{/* 1. Main Flex Container */}
-			<div className='flex flex-col lg:flex-row items-center gap-4'>
-				{/* 2. Image Container - Positioned and Mirrored */}
-				{/* z-10 ensures the image sits ABOVE the white background of the content div if they overlap */}
-				<div className='relative w-full lg:w-1/2 z-10'>
-					<Image
-						src={aboutImage}
-						alt='coffee machine'
-						width={500}
-						height={600}
-						className='scale-x-[-1]'
-					/>
+		<Section
+			variant='light'
+			spacing='lg'
+			className={className}
+			aria-labelledby='about-heading'
+		>
+			{/* Main Flex Container */}
+			<div
+				className={cn(
+					'flex flex-col lg:flex-row items-center gap-8 lg:gap-0',
+					!imageOnLeft && 'lg:flex-row-reverse'
+				)}
+			>
+				{/* Image Container */}
+				<div className='relative w-full lg:w-1/2 z-10 flex justify-center lg:justify-start'>
+					<div className='relative w-full max-w-md lg:max-w-lg'>
+						<Image
+							src={image}
+							alt={imageAlt}
+							width={500}
+							height={600}
+							className={cn(
+								'object-cover shadow-lg',
+								imageOnLeft && 'lg:scale-x-[-1]'
+							)}
+							priority
+						/>
+					</div>
 				</div>
 
-				{/* 3. Content Container - Overlaps Image */}
-				<div className='bg-light p-10 lg:p-16 h-[500px] shadow-sm w-full lg:w-4/5 lg:ml-[-100px] z-20 flex flex-col gap-8 justify-center items-start'>
+				{/* Content Container - Overlaps Image */}
+				<div
+					className={cn(
+						'bg-white p-8 sm:p-12 lg:p-16 shadow-xl w-full lg:w-4/5 z-20',
+						'flex flex-col gap-6 lg:gap-8 justify-center',
+						imageOnLeft ? 'lg:ml-[-100px]' : 'lg:mr-[-100px]'
+					)}
+				>
 					{/* Title */}
-					<h2 className='capitalize text-5xl font-bold leading-[120%] text-dark mb-4 max-w-[550px]'>
-						serve the best coffee taste since 2010
+					<h2
+						id='about-heading'
+						className='text-3xl sm:text-4xl lg:text-5xl font-bold leading-[120%] text-dark capitalize'
+					>
+						{title}
 					</h2>
 
+					{/* Founded Badge (optional) */}
+					{founded && (
+						<p className='text-primary font-semibold text-lg'>
+							Serving excellence since {founded}
+						</p>
+					)}
+
 					{/* Description */}
-					<p className='text-lg text-dark/70 mb-8 max-w-[600px]'>
-						Step behind the scenes and discover the dedication that goes into
-						every brew. From ethically sourced beans to our custom-calibrated
-						machine, we obsess over details to deliver the best taste and
-						experience. Our space is designed to be your cozy escape.
+					<p className='text-base sm:text-lg text-dark/70 leading-relaxed'>
+						{description}
 					</p>
 
-					{/* CTA Button - Reusing previous style */}
-					<button className='font-semibold bg-primary px-8 py-3.5 text-light shadow-xs cursor-pointer hover:scale-105 transition-all whitespace-nowrap self-start'>
-						Learn More
-					</button>
+					{/* CTA Button */}
+					<Button
+						href={ctaHref}
+						size='lg'
+						className='self-start w-full sm:w-auto'
+					>
+						{ctaText}
+					</Button>
 				</div>
 			</div>
-		</section>
+		</Section>
 	)
 }
 
-export default about
+export default About
