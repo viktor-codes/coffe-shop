@@ -14,7 +14,7 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
 			className='flex flex-col h-full'
 		>
 			{/* Quote */}
-			<blockquote className='text-dark text-base md:text-lg italic leading-relaxed flex-grow mb-6'>
+			<blockquote className='text-dark text-base md:text-lg italic leading-relaxed flex grow mb-6'>
 				<p>&ldquo;{testimonial.quote}&rdquo;</p>
 			</blockquote>
 

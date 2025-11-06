@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import Button from '@/components/ui/button'
 import { MenuItemCardProps } from './menu.types'
 
@@ -19,7 +18,7 @@ const MenuItemCard = ({ item, showPrice = false }: MenuItemCardProps) => {
 			/>
 
 			{/* Gradient Overlay */}
-			<div className='absolute inset-0 bg-gradient-to-t from-dark via-dark/70 to-transparent' />
+			<div className='absolute inset-0 bg-linear-to-t from-dark via-dark/70 to-transparent' />
 
 			{/* Content Overlay */}
 			<div className='absolute bottom-0 left-0 right-0 p-6 sm:p-8 flex flex-col justify-end text-light z-10 transition-all duration-300'>
