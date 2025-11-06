@@ -11,6 +11,7 @@ import Articles from '@/components/sections/articles/articles'
 import aboutImage from '@/assets/about.webp'
 
 import { features } from '@/config/features'
+import { articles } from '@/config/articles'
 import { menuItems } from '@/config/menu'
 import { testimonialsData } from '@/config/testimonials'
 import ctaImage from '@/assets/cta-image.webp'
@@ -37,7 +38,7 @@ export default function Home() {
 				backgroundImage={ctaImage}
 				imageAlt='Cafe interior'
 			/>
-			<Articles />
+			<Articles articles={articles} title='Latest Articles' showViewMore />
 			<Footer />
 		</>
 	)
