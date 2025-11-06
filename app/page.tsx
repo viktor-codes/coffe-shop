@@ -12,6 +12,8 @@ import aboutImage from '@/assets/about.webp'
 
 import { features } from '@/config/features'
 import { menuItems } from '@/config/menu'
+import { testimonialsData } from '@/config/testimonials'
+import ctaImage from '@/assets/cta-image.webp'
 
 export default function Home() {
 	return (
@@ -28,8 +30,13 @@ export default function Home() {
 				imageAlt='Coffee machine'
 				founded={2010}
 			/>
-			<Testimonials />
-			<Reservation />
+			<Testimonials testimonials={testimonialsData} />
+			<Reservation
+				title='Book Your Table'
+				description='Reserve your spot today'
+				backgroundImage={ctaImage}
+				imageAlt='Cafe interior'
+			/>
 			<Articles />
 			<Footer />
 		</>

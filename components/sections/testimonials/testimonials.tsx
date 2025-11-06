@@ -2,10 +2,9 @@ import Section from '@/components/ui/section'
 import SectionHeader from '@/components/ui/section-header'
 import TestimonialCard from './testimonial-card'
 import { TestimonialsProps } from './testimonials.types'
-import { testimonialsData } from '@/config/testimonials'
 
 const Testimonials = ({
-	testimonials = testimonialsData,
+	testimonials,
 	title = 'What Our Customers Say',
 	description = 'Read the latest love notes from our community.',
 	className = '',

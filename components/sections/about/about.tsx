@@ -5,18 +5,6 @@ import { AboutProps } from './about.types'
 import { cn } from '@/lib/utils'
 import { ctaConfig } from '@/config/navigation'
 
-/**
- * About section with overlapping image and content design
- *
- * @example
- * <About
- *   title="Our Story"
- *   description="..."
- *   image={aboutImage}
- *   imageAlt="Coffee machine"
- *   founded={2010}
- * />
- */
 const About = ({
 	title,
 	description,

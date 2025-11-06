@@ -1,37 +1,79 @@
 import Image from 'next/image'
-import ctaImage from '@/assets/441.webp'
+import Button from '@/components/ui/button'
+import Container from '@/components/ui/container'
+import { ReservationProps } from './reservation.types'
 
-const reservation = () => {
+/**
+ * Full-width CTA section with background image overlay
+ *
+ * @example
+ * <Reservation
+ *   title="Book Your Table"
+ *   description="Reserve your spot today"
+ *   backgroundImage={ctaImage}
+ *   imageAlt="Cafe interior"
+ * />
+ */
+const Reservation = ({
+	title,
+	description,
+	backgroundImage,
+	imageAlt,
+	ctaText = 'Make Reservation',
+	ctaHref = '/reservation',
+	overlayOpacity = 60,
+	className = '',
+}: ReservationProps) => {
 	return (
-		<section className='relative container  2xl:max-w-7xl mx-auto my-20 py-20 overflow-hidden'>
+		<section
+			className={`relative py-20 lg:py-32 overflow-hidden ${className}`}
+			aria-labelledby='reservation-heading'
+		>
+			{/* Background Image */}
 			<Image
-				src={ctaImage}
-				alt='Coffee shop interior - background for reservation CTA'
-				className='absolute object-cover w-full object-center inset-0 z-0'
+				src={backgroundImage}
+				alt={imageAlt}
+				fill
+				className='absolute object-cover object-center z-0'
+				sizes='100vw'
+				priority={false}
 			/>
+
 			{/* Dark Overlay for Text Readability */}
-			<div className='absolute inset-0 bg-dark/60 z-10'></div>{' '}
-			{/* 60% opaque dark overlay */}
-			{/* Content Container - Centered and on top of overlay */}
-			<div className='relative container mx-auto text-center z-20 px-4'>
-				{' '}
-				{/* z-20 to be above overlay */}
-				{/* Headline */}
-				<h2 className='text-5xl lg:text-6xl font-bold text-light leading-[120%] mb-6'>
-					Make Your Reservation Now
-				</h2>
-				{/* Description */}
-				<p className='text-xl text-light/80 max-w-3xl mx-auto mb-10'>
-					Book your table now to ensure your spot in our cozy cafe. Whether it's
-					a quick espresso or a leisurely chat, we're ready to welcome you.
-				</p>
-				{/* CTA Button */}
-				<button className='self-start font-semibold bg-primary px-10 py-4 text-light shadow-lg cursor-pointer hover:scale-105 transition-all whitespace-nowrap text-xl mx-auto block w-fit'>
-					Learn More
-				</button>
-			</div>
+			<div
+				className='absolute inset-0 bg-dark z-10'
+				style={{ opacity: overlayOpacity / 100 }}
+				aria-hidden='true'
+			/>
+
+			{/* Content Container */}
+			<Container maxWidth='7xl' className='relative z-20'>
+				<div className='text-center max-w-4xl mx-auto'>
+					{/* Headline */}
+					<h2
+						id='reservation-heading'
+						className='text-4xl sm:text-5xl lg:text-6xl font-bold text-light leading-[120%] mb-6'
+					>
+						{title}
+					</h2>
+
+					{/* Description */}
+					<p className='text-lg sm:text-xl text-light/90 mb-10 max-w-3xl mx-auto'>
+						{description}
+					</p>
+
+					{/* CTA Button */}
+					<Button
+						href={ctaHref}
+						size='lg'
+						className='text-xl px-12 py-5 shadow-2xl hover:shadow-primary/50'
+					>
+						{ctaText}
+					</Button>
+				</div>
+			</Container>
 		</section>
 	)
 }
 
-export default reservation
+export default Reservation
