@@ -9,14 +9,17 @@ import Reservation from '@/components/sections/reservation/reservation'
 import Articles from '@/components/sections/articles/articles'
 
 import aboutImage from '@/assets/about.webp'
-
+import { openingHours } from '@/config/opening-hours'
 import { features } from '@/config/features'
 import { articles } from '@/config/articles'
 import { menuItems } from '@/config/menu'
 import { testimonialsData } from '@/config/testimonials'
 import ctaImage from '@/assets/cta-image.webp'
+import { siteConfig } from '@/config/site'
+import { getFooterData } from '@/lib/footer-data'
 
 export default function Home() {
+	const footerData = getFooterData()
 	return (
 		<>
 			<Navbar />
@@ -39,7 +42,7 @@ export default function Home() {
 				imageAlt='Cafe interior'
 			/>
 			<Articles articles={articles} title='Latest Articles' showViewMore />
-			<Footer />
+			<Footer {...footerData} />
 		</>
 	)
 }
