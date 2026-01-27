@@ -50,7 +50,7 @@ const About = ({
 				{/* Content Container - Overlaps Image */}
 				<div
 					className={cn(
-						'bg-white p-8 sm:p-12 lg:p-16 shadow-xl w-full lg:w-4/5 z-20',
+						'bg-white p-8 sm:p-12 lg:p-16 shadow-xl w-2/3 -mt-24 lg:w-4/5 z-20',
 						'flex flex-col gap-6 lg:gap-8 justify-center',
 						imageOnLeft ? 'lg:ml-[-100px]' : 'lg:mr-[-100px]'
 					)}
@@ -81,7 +81,7 @@ const About = ({
 						size='lg'
 						className='self-start w-full sm:w-auto'
 					>
-						{ctaText}
+						"Read Our Story"
 					</Button>
 				</div>
 			</div>

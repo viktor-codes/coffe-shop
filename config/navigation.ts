@@ -26,7 +26,7 @@ export const ctaConfig = {
 		href: '/menu',
 	},
 	learnMore: {
-		text: 'Learn More',
+		text: 'Read Our Story',
 		href: '/about',
 	},
 }

@@ -27,7 +27,7 @@ const baseStyles = `
 // Variant styles
 const variantStyles: Record<ButtonVariant, string> = {
 	primary: `
-    bg-primary text-light
+    bg-primary text-white
     hover:scale-105
     focus:ring-primary
     shadow-xs

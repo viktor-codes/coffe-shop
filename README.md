@@ -1,36 +1,158 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kopikap - Coffee Shop Website
 
-## Getting Started
+Профессиональный веб-сайт кофейни, построенный на Next.js 16 с использованием App Router, TypeScript и Tailwind CSS.
 
-First, run the development server:
+## 🚀 Технологический стек
+
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4
+- **UI Components**: Custom component library
+- **Icons**: React Icons
+- **Fonts**: Geist Sans, Geist Mono, Raleway
+
+## 📋 Возможности
+
+- ✅ Полностью адаптивный дизайн (mobile-first)
+- ✅ SEO оптимизация с метаданными
+- ✅ Типизация TypeScript
+- ✅ Оптимизация изображений через `next/image`
+- ✅ Семантическая верстка
+- ✅ Формы с валидацией (Contact, Reservation)
+- ✅ Фильтрация меню по категориям
+- ✅ Блог с динамическими статьями
+
+## 🛠️ Установка и запуск
+
+### Предварительные требования
+
+- Node.js 18+ 
+- npm, yarn или pnpm
+
+### Установка зависимостей
+
+```bash
+npm install
+# или
+yarn install
+# или
+pnpm install
+```
+
+### Переменные окружения
+
+Создайте файл `.env.local` на основе `.env.example`:
+
+```bash
+cp .env.example .env.local
+```
+
+Отредактируйте `.env.local` и укажите ваш URL:
+
+```env
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+```
+
+**Примечание**: Для локальной разработки переменные окружения не обязательны - используются значения по умолчанию.
+
+### Запуск dev-сервера
 
 ```bash
 npm run dev
-# or
+# или
 yarn dev
-# or
+# или
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Откройте [http://localhost:3000](http://localhost:3000) в браузере.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Сборка для production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## 📁 Структура проекта
 
-To learn more about Next.js, take a look at the following resources:
+```
+coffee_shop/
+├── app/                    # Next.js App Router страницы
+│   ├── about/             # Страница "О нас"
+│   ├── articles/          # Блог
+│   ├── contact/           # Контакты
+│   ├── menu/              # Меню с фильтрацией
+│   ├── reservation/       # Бронирование столика
+│   ├── layout.tsx         # Корневой layout с метаданными
+│   └── page.tsx           # Главная страница
+├── components/            # React компоненты
+│   ├── layout/            # Layout компоненты (Header, Footer, Navbar)
+│   ├── sections/         # Секции страниц
+│   └── ui/               # Переиспользуемые UI компоненты
+├── config/               # Конфигурационные файлы
+│   ├── articles.ts       # Данные статей блога
+│   ├── menu.ts           # Данные меню
+│   ├── site.ts           # Конфигурация сайта
+│   └── ...
+├── assets/               # Изображения и статические файлы
+├── lib/                  # Утилиты и хелперы
+└── types/                # TypeScript типы
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 Особенности реализации
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### SEO оптимизация
+- Метаданные через объект `Metadata` в Next.js
+- Open Graph и Twitter Card теги
+- Структурированные данные
+- Оптимизированные изображения
 
-## Deploy on Vercel
+### Производительность
+- Оптимизация изображений через `next/image`
+- Lazy loading для изображений ниже fold
+- Оптимизированная конфигурация в `next.config.ts`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Типизация
+- Строгая типизация TypeScript
+- Интерфейсы для всех компонентов
+- Типы для данных (Menu, Articles, etc.)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Адаптивность
+- Mobile-first подход
+- Responsive дизайн для всех устройств
+- Оптимизация для различных размеров экранов
+
+## 📝 Скрипты
+
+- `npm run dev` - Запуск dev-сервера
+- `npm run build` - Сборка для production
+- `npm start` - Запуск production сервера
+- `npm run lint` - Проверка кода линтером
+
+## 🚀 Деплой
+
+### Vercel (рекомендуется)
+
+Самый простой способ задеплоить Next.js приложение:
+
+1. Загрузите проект на GitHub
+2. Импортируйте проект в [Vercel](https://vercel.com)
+3. Добавьте переменную окружения `NEXT_PUBLIC_SITE_URL` с URL вашего сайта
+4. Деплой произойдет автоматически
+
+### Другие платформы
+
+Проект можно задеплоить на любую платформу, поддерживающую Next.js:
+- Netlify
+- AWS Amplify
+- Railway
+- DigitalOcean App Platform
+
+## 📄 Лицензия
+
+Этот проект создан для портфолио.
+
+## 👨‍💻 Автор
+
+Проект разработан как демонстрация навыков Fullstack разработки на Next.js.

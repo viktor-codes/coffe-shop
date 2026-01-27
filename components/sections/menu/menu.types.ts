@@ -5,8 +5,8 @@ export interface MenuItem {
 	title: string
 	description: string
 	image: StaticImageData
-	category: 'coffee' | 'pastry' | 'special'
-	price?: number
+	category: 'breakfast' | 'coffee' | 'desserts'
+	price: number
 }
 
 export interface MenuProps {

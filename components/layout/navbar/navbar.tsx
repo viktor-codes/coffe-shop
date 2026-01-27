@@ -62,7 +62,7 @@ const Navbar = ({
                       font-normal text-base transition-all
                       hover:text-primary hover:font-bold
                       focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-sm
-                      ${isActive ? 'text-primary font-bold' : 'text-dark'}
+                      ${isActive ? 'underline text-dark font-semibold' : 'text-dark'}
                     `}
 										aria-current={isActive ? 'page' : undefined}
 									>
