@@ -1,10 +1,10 @@
 import Section from '@/components/ui/section/'
 import SectionHeader from '@/components/ui/section-header'
-import MenuItemCard from './menu-item'
+import MenuCarousel from './menu-carousel'
 import { MenuProps } from './menu.types'
 
 /**
- * Menu section displaying featured items
+ * Menu section displaying featured items in a carousel
  *
  * @example
  * <Menu items={menuItems} title="Our Menu" showPrices />
@@ -26,12 +26,8 @@ const Menu = ({
 			{/* Section Header */}
 			<SectionHeader title={title} description={description} />
 
-			{/* Menu Grid */}
-			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8'>
-				{items.map(item => (
-					<MenuItemCard key={item.id} item={item} showPrice={showPrices} />
-				))}
-			</div>
+			{/* Menu Carousel */}
+			<MenuCarousel items={items} showPrice={showPrices} />
 		</Section>
 	)
 }
