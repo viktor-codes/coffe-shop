@@ -39,10 +39,10 @@ const MenuItemCard = ({ item, showPrice = false }: MenuItemCardProps) => {
 					{item.description}
 				</p>
 
-				{/* CTA Button */}
+				{/* CTA Button
 				<Button href={`/menu#${item.id}`} size='lg' className='self-start'>
 					View Details
-				</Button>
+				</Button> */}
 			</div>
 		</article>
 	)
